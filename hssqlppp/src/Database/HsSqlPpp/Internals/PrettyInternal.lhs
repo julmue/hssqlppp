@@ -730,7 +730,7 @@ Statement components
 >             ++ show x
 > tref flg (TableRefParens _ t) = parens (tref flg t)
 > tref flg (OdbcTableRef _ t) = text "{oj" <+> tref flg t <> text "}"
-> tref flg (TableAlias _ t tr) = maybeParen flg tr <+> text "as" <+> nmc t
+> tref flg (TableAlias _ t tr) = maybeParen flg tr <+> text " " <+> nmc t
 > -- hack this out for now. When the type checking is fixed, can try
 > -- to eliminate unneeded aliases?
 > tref flg (FullAlias _ t s tr) =
